@@ -11,23 +11,25 @@ O script utiliza a biblioteca watchdog, que observa alterações no sistema de a
 
 Eventos monitorados: 
 
-Arquivo/pasta criado(a) 
+- Arquivo/pasta criado(a)
 
-Arquivo/pasta modificado(a) 
+- Arquivo/pasta modificado(a) 
 
-Arquivo/pasta deletado(a) 
+- Arquivo/pasta deletado(a) 
 
-Arquivo/pasta movido(a) 
+- Arquivo/pasta movido(a) 
 
  
 
 Formato do relatório EXCEL: 
 
-Data/hora do evento 
+- Data
 
-Tipo de evento 
+- hora do evento 
 
-Caminho do arquivo/pasta 
+- Tipo de evento 
+
+- Caminho do arquivo/pasta 
 
 3. Limitações 
 
@@ -40,24 +42,24 @@ Para analisar o conteúdo interno do excel, é necessário utilizar outras bibli
 
 4. Estrutura do código 
 
-Meuhandler: classe que herda de filesystemeventhandler e define o que fazer em cada tipo de evento. 
+- Meuhandler: classe que herda de filesystemeventhandler e define o que fazer em cada tipo de evento. 
 
-Registrar_evento: função que grava no CSV a data/hora, tipo de evento e caminho. 
+- Registrar_evento: função que grava no CSV a data/hora, tipo de evento e caminho. 
 
-Remove_duplicidades_Excel: função que remove registros duplicados no relatório. 
+- Remove_duplicidades_Excel: função que remove registros duplicados no relatório. 
 
-Observer: observador que monitora a pasta em tempo real. 
+- Observer: observador que monitora a pasta em tempo real. 
 
  
 
 5. Fluxo geral 
 
-Definir pasta a ser monitorada (XXXX) e onde salvar o relatório (relatório Excel). 
+- Definir pasta a ser monitorada (XXXX) e onde salvar o relatório (relatório Excel). 
 
-Criar o cabeçalho do .xlsm se ele não existir. 
+- Criar o cabeçalho do .xlsm se ele não existir. 
 
-Iniciar o observe para monitorar a pasta. 
+- Iniciar o observe para monitorar a pasta. 
 
-Quando ocorrer um evento, registrar no em relatório Excel. 
+- Quando ocorrer um evento, registrar no em relatório Excel. 
 
-Usar a coluna data/hora para validar se o arquivo foi colocado no dia esperado. 
+- Usar a coluna data/hora para validar se o arquivo foi colocado no dia esperado. 
