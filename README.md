@@ -63,3 +63,18 @@ Para analisar o conteúdo interno do excel, é necessário utilizar outras bibli
 - Quando ocorrer um evento, registrar no em relatório Excel. 
 
 - Usar a coluna data/hora para validar se o arquivo foi colocado no dia esperado. 
+Eu vou te deixar o código atualizado com:
+Base histórica → Base_Dados\base_monitoramento.xlsx
+Relatório diário (só eventos do dia)
+Relatório semanal (últimos 7 dias)
+Relatório mensal (mês atual)
+Colunas separadas para Data e Hora
+ 
+- Base_Dados\base_monitoramento.xlsx → guarda tudo (Data, Hora, Evento, Caminho).
+
+*Relatorios* vai ter:
+relatorio_diario_YYYY-MM-DD.xlsx → só do dia.
+relatorio_semanal_inicio_a_fim.xlsx → últimos 7 dias.
+relatorio_mensal_AAAA-MM.xlsx → mês atual.
+Sempre que houver um evento na pasta, ele atualiza a base e gera os três relatórios automaticamente.
+ 
